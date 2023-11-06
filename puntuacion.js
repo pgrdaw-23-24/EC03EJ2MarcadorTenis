@@ -17,6 +17,8 @@ function resultado() {
         return 'deuce'
     } else {
         return marcador.toString()
+
+        
     }
 }
 
