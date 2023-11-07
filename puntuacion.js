@@ -4,7 +4,6 @@ let puntos = [0, 0]
 // Inicializa la puntuación del juego
 function iniciarJuego() {
     puntos = [0, 0]
-    console.log(`[ OK ] - iniciarJuego()  - ${resultado()}`)
 }
 
 // Indica que uno de los jugadores (0, 1) ha ganado el punto. 
@@ -18,10 +17,8 @@ function puntoJugador(jugador) {
     } else if (puntos[jugador] - puntos[contrincante] == 0) {
         puntos[jugador]++
     } else {
-        // console.log(`[ EXCEPTION ] - juego terminado`)
         return 'exception'
     }
-    // console.log(`[ OK ] - puntoJugador(${jugador}) - ${resultado()}`)
 }
 
 // Devuelve una cadena indicando el resultado actual del juego.

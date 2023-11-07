@@ -3,6 +3,7 @@ import { iniciarJuego, puntoJugador, resultado } from "./puntuacion.js"
 // Test
 
 let jugador = 0
+iniciarJuego()
 
 do {
     jugador = Math.floor(Math.random() + 0.5)
