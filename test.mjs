@@ -1,4 +1,4 @@
-import { iniciarJuego, puntoJugador, resultado } from "./puntuacion.js"
+import { iniciarJuego, puntoJugador, resultado } from "./puntuacion.mjs"
 
 // Test
 

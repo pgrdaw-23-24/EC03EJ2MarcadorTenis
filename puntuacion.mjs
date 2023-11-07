@@ -1,4 +1,3 @@
-
 let puntos = [0, 0]
 
 // Inicializa la puntuación del juego
