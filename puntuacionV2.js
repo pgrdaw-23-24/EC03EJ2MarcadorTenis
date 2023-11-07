@@ -18,10 +18,10 @@ function puntoJugador(jugador) {
     } else if (puntos[jugador] - puntos[contrincante] == 0) {
         puntos[jugador]++
     } else {
-        // console.log(`[ EXCEPTION ] - juego terminado`)
+        console.log(`[ EXCEPTION ] - juego terminado`)
         return 'exception'
     }
-    // console.log(`[ OK ] - puntoJugador(${jugador}) - ${resultado()}`)
+    console.log(`[ OK ] - puntoJugador(${jugador}) - ${resultado()}`)
 }
 
 // Devuelve una cadena indicando el resultado actual del juego.
@@ -29,24 +29,37 @@ function resultado() {
     if (puntos[0] < 3 || puntos[1] < 3) {
         return (transformar(puntos[0]) + ' - ' + transformar(puntos[1]))
     } else if (puntos[0] == 3 && puntos[1] == 3) {
-        return 'Deuce'
+        return 'deuce'
     } else if (puntos[0] > 3 || puntos[1] == 3) {
-        return 'Ventaja al servicio'
+        return 'ventaja al servicio'
     } else if (puntos[0] == 3 || puntos[1] > 3) {
-        return 'Ventaja al resto'
+        return 'ventaja al resto'
     } else {
-        return 'exception'
+        return `exception`
     }
 }
 
 function transformar(puntos) {
     switch (puntos) {
         case 0: return 'nada';
-        case 1: return ' 15 ';
-        case 2: return ' 30 ';
-        case 3: return ' 40 ';
+        case 1: return '15';
+        case 2: return '30';
+        case 3: return '40';
         default: return 'exception';
     }
 }
 
-export { iniciarJuego, puntoJugador, resultado }    // interface
+// Test
+iniciarJuego()
+puntoJugador(1)
+puntoJugador(1)
+puntoJugador(1)
+puntoJugador(0)
+puntoJugador(0)
+puntoJugador(0)     // deuce
+puntoJugador(1)     // ventaja resto
+puntoJugador(0)     //deuce
+puntoJugador(0)     // ventaja servicio
+puntoJugador(0)     // juego servicio
+puntoJugador(0)
+
